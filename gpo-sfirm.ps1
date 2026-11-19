@@ -28,3 +28,8 @@ foreach ($exe in $Exes) {
     Set-GPPrefRegistryValue @common -ValueName "DumpCount"  -Type DWord        -Value 10
     Set-GPPrefRegistryValue @common -ValueName "DumpType"   -Type DWord        -Value 2
 }
+
+# SFirm extended logging (SFirm is 32-bit, so its settings live under Wow6432Node)
+Set-GPPrefRegistryValue -Name $GpoName -Context Computer -Action Update `
+    -Key "HKLM\SOFTWARE\Wow6432Node\StarFinanz\SFirmV4" `
+    -ValueName "LoggingLevel" -Type String -Value "DEBUG1"
