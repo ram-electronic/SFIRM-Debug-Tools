@@ -2,6 +2,10 @@
 
 Tools to set up and test Windows crash dump collection for Star Finanz (SFirm) applications.
 
+<img width="180" height="143" alt="image" src="https://github.com/user-attachments/assets/ba5659d7-9d3f-49c3-951f-e8a381f4364b" />
+
+
+
 | File | Description |
 |------|-------------|
 | `gpo-sfirm.ps1` | Creates/updates a GPO (`GPO-X-SFIRM-Crash-Dumps`) that enables Windows Error Reporting LocalDumps for the SFirm executables (dumps go to `%PROGRAMDATA%\Star Finanz\CrashDumps`). Requires the GroupPolicy module. |
